@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Include the CSS file -->
+    <title>Sony Complaint Systems</title>
+</head>
+<body>
+    <script>
+        example();
+        window.addEventListener("load", function() {
+            document.querySelector(".loading-container").style.display = "none";
+            document.querySelector(".container").style.display = "block";
+        });
+    </script>
+   <div class="loading-container">
+        <div class="loader"></div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Sony Complaint Systems</h1>
+        </header>
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+            <input type=hidden name="orgid" value="00D5j00000Cs0ld">
+            <input type=hidden name="retURL" value="file:///home/sachinpai/Desktop/sfProject/SonyComplaintManagementSystem/web/thankyou.html">
+            <div class="form-group">
+                <label for="name">Contact Name</label>
+                <input id="name" maxlength="80" name="name" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" maxlength="80" name="email" type="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input id="phone" maxlength="40" name="phone" type="tel" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Product</label>
+                <select id="product" name="00N5j00000PmTTB" title="Product" required>
+                    <option value="">-- Select Product --</option>
+                    <option value="GC1040">GC1040</option>
+                    <option value="GC1060">GC1060</option>
+                    <option value="GC3020">GC3020</option>
+                    <option value="GC3040">GC3040</option>
+                    <option value="GC3060">GC3060</option>
+                    <option value="GC5020">GC5020</option>
+                    <option value="GC5040">GC5040</option>
+                    <option value="GC5060">GC5060</option>
+                    <option value="GC1020">GC1020</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select id="priority" name="00N5j00000PmTTB" title="priority" required>
+                    <option value="">-- Select Product --</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input id="subject" maxlength="80" name="subject" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <script>
+        setTimeout(function () {
+            document.querySelector(".loading-container").style.display = "none";
+            document.querySelector(".container").style.display = "block";
+        }, 3000); // Wait for 3 seconds (3000 milliseconds) before hiding the loading container
+    </script>
+</body>
+</html>
